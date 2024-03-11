@@ -1,5 +1,5 @@
-const REACT_APP_API_URL = "https://ytclone-backend.onrender.com";
-// const REACT_APP_API_URL = "http://localhost:5000";
+const API_URL = "https://ytclone-backend.onrender.com";
+// const API_URL = "http://localhost:5000";
 
 const key = "AIzaSyBe7MDYvGzRey4IDwJLv4nmZIcUL7BQcTQ";
 
@@ -7,7 +7,7 @@ const getApi = async () => {
 
 
     try {
-        const response = await fetch(REACT_APP_API_URL, {
+        const response = await fetch(API_URL, {
             method: "GET",
             credentials: "include",
             headers: {
@@ -33,7 +33,7 @@ export const postLike = async (data) => {
     if (!data) return null;
 
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/likedVideos/`, {
+        const response = await fetch(`${API_URL}/likedVideos/`, {
             method: "POST",
             mode: "cors",
             headers: {
@@ -73,7 +73,7 @@ export const postWatchLater = async (data) => {
     if (!data) return null;
 
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/watchlater/`, {
+        const response = await fetch(`${API_URL}/watchlater/`, {
             method: "POST",
             mode: "cors",
             headers: {
@@ -109,7 +109,7 @@ export const postSubscribe = async (data) => {
     if (!data) return null;
 
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/subscribe/`, {
+        const response = await fetch(`${API_URL}/subscribe/`, {
             method: "POST",
             mode: "cors",
             headers: {
@@ -147,7 +147,7 @@ export const postHistory = async (data) => {
     if (!data) return;
 
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/history/`, {
+        const response = await fetch(`${API_URL}/history/`, {
             method: "POST",
             mode: "cors",
             headers: {
@@ -187,7 +187,7 @@ export const getLiked = async (id) => {
     if (!id) return null;
 
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/likedVideos/video/${id}`, {
+        const response = await fetch(`${API_URL}/likedVideos/video/${id}`, {
             method: "GET",
             mode: "cors",
             headers: {
@@ -216,7 +216,7 @@ export const getSubscribed = async (channelId) => {
     if (!channelId) return null;
 
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/subscribe/channel/${channelId}`, {
+        const response = await fetch(`${API_URL}/subscribe/channel/${channelId}`, {
             method: "GET",
             mode: "cors",
             headers: {
@@ -243,7 +243,7 @@ export const getWatchLater = async (id) => {
     if (!id) return null;
 
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/watchlater/video/${id}`, {
+        const response = await fetch(`${API_URL}/watchlater/video/${id}`, {
             method: "GET",
             mode: "cors",
             headers: {
@@ -268,7 +268,7 @@ export const getWatchLater = async (id) => {
 
 export const getAllSubscriptions = async () => {
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/subscribe/all`, {
+        const response = await fetch(`${API_URL}/subscribe/all`, {
             method: "GET",
             mode: "cors",
             headers: {
@@ -292,7 +292,7 @@ export const getAllSubscriptions = async () => {
 
 export const getAllLikedVideos = async () => {
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/likedvideos/`, {
+        const response = await fetch(`${API_URL}/likedvideos/`, {
             method: "GET",
             mode: "cors",
             headers: {
@@ -315,7 +315,7 @@ export const getAllLikedVideos = async () => {
 
 export const getAllWatchLater = async () => {
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/watchlater/all`, {
+        const response = await fetch(`${API_URL}/watchlater/all`, {
             method: "GET",
             mode: "cors",
             headers: {
@@ -338,7 +338,7 @@ export const getAllWatchLater = async () => {
 
 export const getHistory = async () => {
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/history/`, {
+        const response = await fetch(`${API_URL}/history/`, {
             method: "GET",
             mode: "cors",
             headers: {
@@ -363,7 +363,7 @@ export const getHistory = async () => {
 
 export const deleteLiked = async (id) => {
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/likedvideos/${id}`, {
+        const response = await fetch(`${API_URL}/likedvideos/${id}`, {
             method: "DELETE",
             mode: "cors",
             headers: {
@@ -386,7 +386,7 @@ export const deleteLiked = async (id) => {
 
 export const deleteWatchLater = async (id) => {
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/watchlater/${id}`, {
+        const response = await fetch(`${API_URL}/watchlater/${id}`, {
             method: "DELETE",
             mode: "cors",
             headers: {
@@ -409,7 +409,7 @@ export const deleteWatchLater = async (id) => {
 
 export const deleteSubscription = async (channelId) => {
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/subscribe/${channelId}`, {
+        const response = await fetch(`${API_URL}/subscribe/${channelId}`, {
             method: "DELETE",
             mode: "cors",
             headers: {
@@ -590,7 +590,7 @@ export const getSearchApi = async (query) => {
 
 export const googleSignIn = async (googleToken) => {
     try {
-        const res = await fetch(`${REACT_APP_API_URL}/user/signin`, {
+        const res = await fetch(`${API_URL}/user/signin`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -618,7 +618,7 @@ export const googleSignIn = async (googleToken) => {
 
 export const logoutApi = async () => {
     try {
-        const res = await fetch(`${REACT_APP_API_URL}/user/signout`, {
+        const res = await fetch(`${API_URL}/user/signout`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -649,7 +649,7 @@ export const userGetSelf = () => {
 
 export const getUserStatsApi = async () => {
     try {
-        const response = await fetch(`${REACT_APP_API_URL}/user/stats`, {
+        const response = await fetch(`${API_URL}/user/stats`, {
             method: "GET",
             mode: "cors",
             headers: {
