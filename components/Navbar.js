@@ -279,7 +279,7 @@ const Navbar = () => {
             <button id='signout' onClick={signout}><img src={logoutIcon} width={"20px"} height={"20px"} alt='signoutIcon' />Sign out</button>
           </div>
           <div id='googleBtn' ref={loginMenu}>
-            <GoogleOAuthProvider clientId="356940682119-du1mq7l79ht4pae6hgee83dnhaade3d4.apps.googleusercontent.com">
+            <GoogleOAuthProvider clientId="841707970634-r87tvi8khske4napqb9b2bhqncqqaa19.apps.googleusercontent.com">
               <SignIn />
             </GoogleOAuthProvider>
           </div>
