@@ -1,0 +1,24 @@
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.link {
+	background-color: var(--text-color-tertiary);
+	color: var(--bg-color-tertiary);
+	padding: 2rem 3rem;
+	border-radius: 0.5rem;
+	width: 100%;
+	text-align: center;
+	font-size: 2rem;
+}

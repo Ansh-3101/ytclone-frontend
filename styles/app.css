@@ -1,0 +1,1658 @@
+* {
+    background-color: #0f0f0f;
+    color: #d8d8d8;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+a {
+    border: none;
+}
+
+Link {
+    border: none;
+}
+
+.selected {
+    background-color: #272727 !important;
+    color: white;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.toastStyle {
+    background: #00000000 !important;
+    color: white;
+    /* height: 100px; */
+}
+
+.toast div {
+    background-color: #00000000;
+}
+
+Link:hover {
+    cursor: pointer;
+}
+
+.likeTitle {
+    background-color: #00000000;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #717171;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f3f;
+}
+
+#navbar {
+    display: flex;
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    z-index: 10;
+}
+
+.start {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#menu {
+    border-radius: 30px;
+    height: 25px;
+    width: 25px;
+    padding: 8px;
+}
+
+#menu:hover {
+    background-color: #272727;
+}
+
+#logoTitle:hover {
+    cursor: pointer;
+}
+
+#title {
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    margin: 0px 5px;
+}
+
+.center {
+    box-sizing: border-box;
+    border: 0.5px solid #303030;
+    border-radius: 30px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    background-color: #222222;
+}
+
+#search {
+    border-radius: 30px 0px 0px 30px;
+    box-sizing: border-box;
+    height: 40px;
+    padding-left: 15px;
+    border: none;
+    width: 100%;
+    background-color: #121212;
+    border-right: 0.5px solid #303030;
+    font-size: 1rem;
+}
+
+.search {
+    border-radius: 30px 0px 0px 30px;
+    box-sizing: border-box;
+    height: 40px;
+    border: none;
+    width: 90%;
+    background-color: #121212;
+    /* border-right: 0.5px solid #303030; */
+    font-size: 1rem;
+}
+#search:focus {
+    outline: none !important;
+}
+
+#searchIcon {
+    margin: 0px 22px;
+    background-color: #222222;
+}
+
+#searchClose {
+    display: none;
+}
+
+.end {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.loginBtn {
+    border: 1px solid blue;
+    color: black;
+    background-color: #00000000;
+    padding: 10px;
+}
+
+.userInfo {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    border-radius: 10px;
+    background-color: #282828;
+    z-index: 100;
+    padding: 10px;
+    transition: width 200ms ease-in-out;
+}
+
+.userInfo:not(:focus-within) {
+    display: none;
+}
+
+.userName,
+.userEmail {
+    padding-top: 10px;
+}
+
+.userInfo div {
+    background-color: #282828;
+}
+
+#signout {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #3f3f3f;
+}
+
+.userStats {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #00000000;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.userStats h4 {
+    background-color: #00000000;
+}
+
+.statsItem {
+    padding: 5px;
+    background-color: #00000000;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+#signout:hover {
+    background-color: #464646;
+    cursor: pointer;
+}
+
+#signout img {
+    filter: invert();
+    background-color: #00000000;
+    padding: 5px;
+}
+
+#userPic {
+    border-radius: 50%;
+}
+
+#profilePic {
+    border-radius: 50px;
+}
+
+#profilePic:hover {
+    cursor: pointer;
+}
+
+#logoutBtn {
+    background-color: #00000000;
+    filter: invert();
+    margin: 0px 10px;
+}
+
+#logoutBtn:hover {
+    background-color: #00000000;
+    content: url("/icons/icons8-logout.gif");
+}
+
+#settings:hover {
+    content: url("/icons/icons8-settings.gif");
+    filter: invert();
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.sideBarDiv {
+    justify-self: start;
+    width: 22%;
+    height: auto;
+    max-height: 100vh;
+    /* overflow-y: auto; */
+    z-index: 3;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition: width 200ms ease-in-out;
+    &::-webkit-scrollbar-thumb {
+        visibility: hidden;
+    }
+}
+.utils {
+    width: auto;
+    height: auto;
+}
+
+.sideBarDiv:hover {
+    &::-webkit-scrollbar-thumb {
+        visibility: visible;
+    }
+}
+
+.routeComponent {
+    justify-self: end;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-y: auto;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 55px;
+    &::-webkit-scrollbar-thumb {
+        visibility: hidden;
+    }
+}
+
+.routeComponent:hover {
+    &::-webkit-scrollbar-thumb {
+        visibility: visible;
+    }
+}
+
+#sidebar {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 55px;
+    width: 100%;
+    padding: 5px 8px;
+    height: 100%;
+    overflow-y: auto;
+}
+.sideBarMain {
+    display: block;
+    width: 100%;
+}
+
+.sideBarIcon {
+    background-color: #00000000;
+    padding: 5px 8px;
+}
+
+.sideBarSpan {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #00000000;
+    white-space: nowrap;
+}
+
+.sidebarItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 5px;
+    margin: 5px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    background-color: #00000000;
+    text-decoration: none;
+    width: 88%;
+}
+
+.subsIcon {
+    background-color: #00000000;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+.sidebarItem:hover {
+    cursor: pointer;
+}
+
+.sidebarHeading {
+    padding: 5px;
+    margin: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #00000000;
+}
+
+.sidebarItem:hover {
+    background-color: #272727;
+}
+
+.homeVideo {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #00000000;
+    padding: 10px;
+    width: 350px;
+    max-width: 600px;
+    min-width: 200px;
+    height: auto;
+    text-decoration: none;
+}
+.homeVideo:hover {
+    cursor: pointer;
+}
+
+.videoItem {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.homeVideoSkeleton {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #717171;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    min-width: 200px;
+    height: 15vw;
+    border-radius: 10px;
+    text-decoration: none;
+    /* background: linear-gradient(90deg, #505050 25%, #969696 50%, #505050 75%); */
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s linear infinite;
+}
+
+.skeleton {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #717171;
+    /* padding: 10px; */
+    width: 330px;
+    /* max-width: 600px;
+  min-width: 200px; */
+    height: 185px;
+    border-radius: 10px;
+    text-decoration: none;
+    /* background: linear-gradient(90deg, #505050 25%, #969696 50%, #505050 75%); */
+    /* background-size: 200% 100%; */
+    animation: skeleton-loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 100% 50%;
+    }
+    25% {
+        background-position: 75% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    75% {
+        background-position: 25% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* .videoItemSkeleton{
+  display: block;
+} */
+
+.videoItem {
+    border: none;
+}
+
+.itemImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    /* object-fit: cover; */
+    border-radius: 15px;
+}
+
+/* .itemImageSkeleton{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  animation: skeleton-loading 0.6s linear infinite alternate;
+} */
+
+.itemInfo {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.itemChannelImage {
+    border-radius: 50%;
+    align-self: flex-start;
+    width: 10%;
+    background-color: #272727;
+    z-index: 1;
+    aspect-ratio: 1/1;
+}
+
+.videoInfo {
+    display: inline-flex;
+    box-sizing: border-box;
+    padding-left: 10px;
+    flex-direction: column;
+}
+
+.videoStats {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.channelName {
+    margin-top: 4px;
+    text-decoration: none;
+}
+
+.channelName:hover {
+    color: #ffffff;
+}
+
+.channelName,
+.videoStats div,
+.videoStats span {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+.video {
+    /* display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  grid-template-columns: auto auto auto;
+  overflow-x: hidden;
+  grid-auto-flow: row;
+  row-gap: 20px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* align-items: center; */
+    justify-content: center;
+    row-gap: 20px;
+    /* padding-top: 20px; */
+}
+
+#watchComponent {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    padding-left: 40px;
+    flex-direction: row;
+}
+
+#watchVideo {
+    display: flex;
+    width: 55vw;
+    height: 30.9vw;
+    border: none;
+    justify-self: flex-start;
+}
+
+.searchItem {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    margin-bottom: -60px;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+/* .searchImageDiv{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 80%;
+  height: auto;
+  position: relative;
+}
+
+.searchImage{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border-width: 0;
+  border: none;
+  outline: none;
+  image-resolution: ;
+} */
+.searchImageDiv {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: calc(100% - 25%); /* Adjust the height of the div */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Add this to hide the overflow */
+}
+
+.searchImage {
+    width: 100%;
+    height: calc(100% + 25%); /* Increase the height of the image */
+    margin-top: -4px; /* Move the image up */
+    border-radius: 10px;
+    border-width: 0;
+    object-fit: cover; /* Add this to crop the image */
+}
+
+.searchInfo {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.searchTitle {
+    font-size: 1rem;
+    font-weight: 550;
+    color: #f1f1f1;
+}
+
+.searchStats {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+.searchChannel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+.searchChannel span {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+.searchStats span {
+    color: #aaaaaa;
+    font-size: 0.8rem;
+}
+
+.searchChannelIcon,
+.searchChannel span:hover {
+    color: #d8d8d8;
+}
+
+.searchChannelIcon {
+    border-radius: 50%;
+    width: 5%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.searchDescription {
+    padding-top: 20px;
+    color: #aaaaaa;
+    font-size: 0.8rem;
+}
+
+.recommendationItem {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 2px 20px;
+    text-decoration: none;
+}
+
+.recommendationImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.recommendationTitle {
+    font-size: 0.9rem;
+}
+
+.recommendationChannel span:hover {
+    color: #ffffff;
+}
+
+.recommendationChannel span,
+.recommendationChannel {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.recommendationStats span {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+}
+.watchLeft {
+    width: 78%;
+    padding-left: 50px;
+}
+
+.watchRightItem {
+    justify-self: end;
+    width: 100%;
+}
+
+.watchInfo {
+    display: block;
+    width: 55vw;
+    height: auto;
+    padding-top: 10px;
+}
+
+.watchTitle {
+    margin-top: 10px;
+}
+
+.watchTitle span {
+    font-size: 1rem;
+    width: 100%;
+    height: auto;
+    font-weight: 500;
+}
+
+.watchStats {
+    display: grid;
+    /* flex-direction: row; */
+    grid-template-columns: 10% 38% 12% 20% 20%;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.watchChannelIcon {
+    border-radius: 50%;
+    width: 90%;
+    height: auto;
+}
+
+.watchChannelInfo {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    margin-left: 10px;
+}
+
+.watchChannelInfo:hover {
+    cursor: pointer;
+}
+
+.watchStatsInfo span {
+    color: #aaaaaa;
+    font-size: 0.85rem;
+}
+
+.channelName span:hover {
+    color: white;
+}
+
+.subscribeBtn {
+    border-radius: 30px;
+    color: black;
+    padding: 10px 15px;
+    margin: 20px;
+    font-size: 1rem;
+    background-color: white;
+    border: none;
+}
+
+.subscribeBtn:hover {
+    cursor: pointer;
+}
+
+.likeBtn {
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    justify-content: center;
+}
+
+.likeBtn img {
+    background-color: #00000000;
+    filter: invert();
+    margin-right: 5px;
+}
+
+.likeHeading {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+    background-color: #00000000;
+}
+
+.likeBtn:hover,
+.watchLaterBtn:hover {
+    cursor: pointer;
+}
+
+.watchLaterBtn {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.watchLaterBtn span {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+    padding-left: 5px;
+    background-color: #00000000;
+}
+
+.watchLaterBtn img {
+    background-color: #00000000;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    filter: invert();
+}
+
+.watchDescription {
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #272727;
+    padding: 10px;
+}
+
+.watchDescription div,
+.watchDescription p,
+.watchDescription span {
+    background-color: #00000000;
+    font-size: 0.9rem;
+    white-space: pre-line;
+}
+
+.watchComments {
+    padding-top: 20px;
+}
+
+.commentItem {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+    width: 100%-padding;
+}
+
+.commentImage {
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: 5%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.commentInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+}
+
+.commentor {
+    font-size: 0.9rem;
+    color: #f1f1f1;
+}
+
+.commentDate {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+}
+
+.commentText p {
+    color: #f1f1f1;
+    font-size: 0.9rem;
+    padding-left: 5px;
+    white-space: pre-line;
+}
+
+.channel {
+    /* margin: 20px;
+  padding: 20px;
+  margin-top: 5px; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+}
+
+.channelBanner {
+    width: 100%;
+    margin-bottom: -20%;
+    margin-top: -20%;
+    overflow: hidden;
+    height: 13%;
+}
+
+.channelHeader {
+    width: auto;
+    padding: 3% 5%;
+    z-index: 9;
+    display: grid;
+    background-color: #0f0f0f;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.channelIcon {
+    width: 80%;
+    border-radius: 50%;
+    align-self: center;
+    height: auto;
+}
+
+.channelInfo {
+    padding: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+.subscribe {
+    justify-self: flex-end;
+    height: min-content;
+    align-self: center;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.channelStats {
+    color: #aaaaaa;
+    font-weight: 200;
+    font-size: 0.9rem;
+    padding-top: 10px;
+}
+
+.channelOrigin {
+    font-size: 0.9rem;
+    padding-top: 10px;
+    color: #aaaaaa;
+}
+
+.channelTrailer {
+    width: auto;
+    /* box-sizing: border-box; */
+    /* padding: 20px; */
+    height: 20%;
+    /* padding-left: 5%; */
+    display: flex;
+    flex-direction: row;
+}
+
+.trailer {
+    width: 32vw;
+    max-width: 40%;
+    height: 17vw;
+    /* max-height: 100%; */
+    border: none;
+    border-radius: 10px;
+}
+
+.trailerInfo {
+    padding: 10px;
+    padding-left: 20px;
+    display: flex;
+    width: 50%;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    white-space: pre-line;
+}
+
+.trailerMetaData span,
+.trailerMetaData {
+    color: #aaaaaa;
+    padding: 5px 0px;
+    font-size: 0.8rem;
+}
+
+.trailerDesc {
+    padding-top: 10px;
+}
+
+.aboutChannel {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.channelDescription {
+    width: 70%;
+    white-space: pre-line;
+}
+
+.channelDescription span {
+    padding-bottom: 40px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.desc {
+    padding-top: 20px;
+}
+
+.stats {
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 10%;
+    padding-right: 2%;
+}
+
+.channelData {
+    padding: 10px 5%;
+}
+
+.channelVideos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+.videosList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 10px 10px 10px 0px;
+}
+
+.channelVideoItem {
+    box-sizing: border-box;
+    width: 25%;
+    min-width: 200px;
+    height: auto;
+    text-decoration: none;
+    padding: 10px 10px 10px 0px;
+}
+
+.channelVideoItem img {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.channelVideos span {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.videoTitle {
+    padding: 5px 2px;
+    font-size: 0.9rem;
+    color: #d1d1d1;
+}
+
+.likedVideos {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.likeChannelIcon {
+    border-radius: 50%;
+    width: 5%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.heading {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.likedItems {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.itemSkeleton {
+    width: 100%;
+    border-radius: 15px;
+    height: 12vw;
+    margin: 15px 0px;
+    background-color: #222222;
+    animation: skeleton-loading 1.5s linear infinite;
+}
+
+.item:hover {
+    background-color: #303030;
+    transition: 0.5s ease;
+}
+
+.likeImageDiv {
+    width: 30%;
+    margin-right: 20px;
+    background-color: #00000000;
+}
+
+.likeInfo,
+.likeInfo div,
+.likeChannel span {
+    background-color: #00000000;
+}
+
+.likeChannel:hover {
+    cursor: pointer;
+}
+
+.likeChannel span {
+    color: #aaaaaa;
+}
+
+.likeImage {
+    width: 100%;
+    border-radius: 15px;
+    background-color: #00000000;
+}
+
+.likeChannel {
+    margin-top: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    color: #aaaaaa;
+    justify-items: center;
+    align-items: center;
+    z-index: 10;
+    background-color: #00000000;
+}
+
+.likeChannel span:hover {
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    * {
+        font-size: medium;
+    }
+
+    .sideBarDiv {
+        position: absolute;
+    }
+
+    .video {
+        width: 98%;
+    }
+
+    #watchComponent {
+        padding: 10px;
+    }
+
+    .watchLeft {
+        padding: 10px;
+    }
+
+    .watchRightItem {
+        height: 10vw;
+    }
+
+    .subscribeBtn {
+        width: 100%;
+        margin: 20px 0px;
+        padding: 5px;
+        font-size: small;
+        font-weight: 500;
+        border: none;
+    }
+    .recommendationItem {
+        width: 100%;
+        padding: 10px;
+        min-height: 60px;
+    }
+
+    .recommendationImageDiv {
+        width: 50%;
+        padding: 3px 0px;
+    }
+
+    .searchInfo {
+        padding: 5px;
+    }
+
+    .recommendationTitle {
+        overflow-y: hidden;
+        text-wrap: wrap;
+        height: 20%;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    * {
+        font-size: small;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-thumb {
+        visibility: hidden;
+    }
+
+    #menu {
+        width: 20px;
+        z-index: 10;
+    }
+
+    #logoTitle {
+        width: 20vw;
+    }
+
+    #navbar {
+        padding-left: 0px;
+    }
+
+    .center {
+        width: 0%;
+    }
+
+    .routeComponent {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .video {
+        width: 100%;
+        padding: 0px;
+        padding-top: 15px;
+    }
+
+    .homeVideo {
+        width: 100%;
+        padding: 5px;
+        padding-right: 20px;
+    }
+
+    .itemImage {
+        border-radius: 0px;
+    }
+
+    .itemInfo {
+        padding: 5px;
+        padding-left: 10px;
+    }
+
+    .sideBarDiv {
+        position: absolute !important;
+        width: 0%;
+    }
+
+    .center {
+        /* box-sizing: border-box;
+        border: 0.5px solid #303030;
+        border-radius: 0px;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        flex-direction: row;
+        z-index: 1000;
+        align-items: center;
+        justify-self: flex-end;
+        justify-items: flex-end;
+        justify-content: flex-end;
+        background-color: #222222; */
+        padding: 0px;
+        box-sizing: border-box;
+        /* position: absolute; */
+        z-index: 1000;
+        display: flex;
+        margin-left: -10px;
+        height: auto;
+        background-color: #0f0f0f;
+        border: none;
+        border-radius: 40px 0px 0px 40px;
+        flex-direction: row-reverse;
+        justify-self: flex-end;
+        width: auto;
+    }
+
+    .search {
+        /* border-radius: 0px;
+        box-sizing: border-box;
+        height: 40px;
+        border: none;
+        width: 90%;
+        background-color: #121212;
+        border-right: 0.5px solid #303030;
+        font-size: 1rem; */
+        display: none;
+        border: none;
+        border-radius: 0px;
+        width: 80%;
+        width: 80%;
+        margin-right: 20px;
+        justify-self: flex-start;
+        background-color: #00000000;
+    }
+
+    #search {
+        /* display: none;
+        justify-self: flex-end;
+        width: 90%;
+        border-radius: 0px;
+        box-sizing: border-box;
+        height: 40px;
+        padding-left: 0px;
+        border: none;
+        width: 100%;
+        background-color: #121212;
+        border-right: 0.5px solid #303030;
+        font-size: 1rem; */
+        width: 100%;
+        border-right: none;
+        border-radius: 0px 40px 40px 0px;
+        border-left: 2px solid #272727;
+        background-color: #282828;
+    }
+
+    #searchIcon {
+        /* position: absolute;
+        justify-self: flex-start; */
+        background-color: #00000000;
+        width: 24px;
+    }
+
+    .searchItem {
+        padding: 0px 5px 50px 0px;
+    }
+
+    #searchClose {
+        /* display: block; */
+        justify-self: flex-end;
+        padding-right: 20px;
+        padding-left: -20px;
+    }
+
+    .searchImageDiv {
+        width: 80%;
+        height: auto;
+        padding: 0px 5px 0px 0px;
+        margin: 0px;
+        align-self: flex-start;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .searchInfo {
+        padding: 0px 2%;
+        padding-top: 2%;
+        height: 100%;
+    }
+
+    .searchTitle {
+        font-size: x-small;
+        font-weight: 400;
+    }
+
+    .searchChannel {
+        padding-top: 10px;
+    }
+
+    .searchImage {
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        border-radius: 10px;
+        padding: 0px;
+        margin: 0px;
+        align-self: flex-start;
+        border-width: 0;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .searchDescription {
+        display: none;
+    }
+
+    #watchComponent {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .watchLeft {
+        width: 100%;
+        padding: 0px;
+    }
+
+    #watchVideo {
+        width: 100%;
+        height: 55vw;
+        padding: 0px;
+    }
+
+    .watchInfo {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .watchStats {
+        width: 100%;
+        display: block;
+    }
+
+    .likeBtn span,
+    .watchLaterBtn span {
+        font-size: 0.8rem;
+    }
+
+    .likeBtn,
+    .watchLaterBtn {
+        padding: 5px;
+        width: 48%;
+        margin-top: 20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .watchLaterBtn img {
+        width: 25px;
+        height: auto;
+    }
+
+    .subscribeBtn {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .watchChannelIcon {
+        width: 40px;
+        display: inline-block;
+    }
+
+    .watchChannelInfo {
+        display: inline-block;
+        width: 80%;
+    }
+
+    .watchDescription {
+        width: 100%;
+    }
+
+    .recommendationItem {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .commentItem {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .commentImage {
+        width: 30px;
+    }
+
+    .commentInfo {
+        padding-left: 10px;
+    }
+
+    .commentText p {
+        padding-top: 0px;
+    }
+
+    .watchRightItem {
+        width: 100%;
+        height: auto;
+    }
+
+    .recommendationImageDiv {
+        width: 90%;
+    }
+
+    .channelHeader {
+        display: block;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .channelIcon {
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+    .channelInfo {
+        display: block;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .name {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 1.8rem;
+        font-weight: 550;
+    }
+
+    .channelStats {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .channelOrigin {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .channelTrailer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .trailer {
+        width: 100%;
+        border: none;
+        height: 50vw;
+    }
+
+    .trailerInfo {
+        width: 100%;
+    }
+
+    .trailerDesc {
+        display: none;
+    }
+
+    .trailerMetaData span {
+        font-size: 0.9rem;
+    }
+
+    .aboutChannel {
+        flex-direction: column-reverse;
+    }
+
+    .channelDescription,
+    .stats {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .videosList {
+        padding: 10px 0px;
+    }
+
+    .channelVideoItem {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0px;
+    }
+
+    .likedVideos {
+        width: 100%;
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .item {
+        width: auto;
+    }
+
+    .likedItems {
+        width: 98%;
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    .likeImageDiv {
+        width: 45%;
+    }
+
+    .likeImage {
+        width: 100%;
+        border-radius: 2px;
+        height: auto;
+    }
+
+    .likeInfo {
+        width: 50%;
+    }
+
+    .likeChannelIcon {
+        border-radius: 50%;
+        width: 15%;
+        height: auto;
+        /* margin-right: 10px; */
+    }
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: rgb(40, 40, 40);
+    }
+    20% {
+        background-color: rgb(50, 50, 50);
+    }
+    40% {
+        background-color: rgb(55, 55, 55);
+    }
+    60% {
+        background-color: rgb(55, 55, 55);
+    }
+    80% {
+        background-color: rgb(50, 50, 50);
+    }
+    100% {
+        background-color: rgb(40, 40, 40);
+    }
+}

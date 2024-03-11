@@ -1,0 +1,9 @@
+.toastStyle{
+    background: #00000000 !important;
+    color: white;
+    /* height: 100px; */
+  }
+  
+  .toast div{
+    background-color: #00000000;
+  }
