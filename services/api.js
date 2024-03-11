@@ -1,4 +1,4 @@
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+const REACT_APP_API_URL = "https://ytclone-backend.onrender.com";
 // const REACT_APP_API_URL = "http://localhost:5000";
 
 const key = "AIzaSyBe7MDYvGzRey4IDwJLv4nmZIcUL7BQcTQ";
@@ -590,7 +590,7 @@ export const getSearchApi = async (query) => {
 
 export const googleSignIn = async (googleToken) => {
     try {
-        const res = await fetch(REACT_APP_API_URL + "/user/signin", {
+        const res = await fetch(`${REACT_APP_API_URL}/user/signin`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
