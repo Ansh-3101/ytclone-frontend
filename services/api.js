@@ -1,4 +1,4 @@
-const REACT_APP_API_URL = "https://ytclone-backend-latest.onrender.com";
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 // const REACT_APP_API_URL = "http://localhost:5000";
 
 const key = "AIzaSyBe7MDYvGzRey4IDwJLv4nmZIcUL7BQcTQ";
