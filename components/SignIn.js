@@ -55,6 +55,7 @@ const SignIn = () => {
                 if (response.status === "ok") {
                     notify(response?.message, "success");
                     dispatch(loginAction(response.user));
+                    localStorage.setItem("JWT-TOKEN", response.token);
                     const res = await getUserStatsApi();
 
                     if (res.status === "ok") {
