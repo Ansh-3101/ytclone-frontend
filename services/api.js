@@ -12,6 +12,7 @@ const getApi = async () => {
             credentials: "include",
             headers: {
                 "Content-Type": "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null
             },
         });
 
@@ -39,6 +40,7 @@ export const postLike = async (data) => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             mode: "cors",
             credentials: "include",
@@ -77,7 +79,8 @@ export const postWatchLater = async (data) => {
             method: "POST",
             mode: "cors",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             mode: "cors",
             credentials: "include",
@@ -114,6 +117,7 @@ export const postSubscribe = async (data) => {
             mode: "cors",
             headers: {
                 "Content-Type": "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
                 accept: "application/json",
             },
             mode: "cors",
@@ -152,6 +156,7 @@ export const postHistory = async (data) => {
             mode: "cors",
             headers: {
                 "Content-Type": "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
                 accept: "application/json",
             },
             mode: "cors",
@@ -193,6 +198,7 @@ export const getLiked = async (id) => {
             headers: {
                 "Content-Type": "appliaction/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             mode: "cors",
             credentials: "include",
@@ -222,6 +228,7 @@ export const getSubscribed = async (channelId) => {
             headers: {
                 "Content-Type": "appliaction/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             mode: "cors",
             credentials: "include",
@@ -249,6 +256,7 @@ export const getWatchLater = async (id) => {
             headers: {
                 "Content-Type": "appliaction/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             mode: "cors",
             credentials: "include",
@@ -274,6 +282,7 @@ export const getAllSubscriptions = async () => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             withCredentials: true,
             credentials: "include",
@@ -298,6 +307,7 @@ export const getAllLikedVideos = async () => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             withCredentials: true,
             credentials: "include",
@@ -321,6 +331,7 @@ export const getAllWatchLater = async () => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             credentials: "include",
             withCredentials: true,
@@ -344,6 +355,7 @@ export const getHistory = async () => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             credentials: "include",
             withCredentials: true,
@@ -369,6 +381,7 @@ export const deleteLiked = async (id) => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             credentials: "include",
             withCredentials: true,
@@ -392,6 +405,7 @@ export const deleteWatchLater = async (id) => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             credentials: "include",
             withCredentials: true,
@@ -415,6 +429,7 @@ export const deleteSubscription = async (channelId) => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             credentials: "include",
             withCredentials: true,
@@ -623,6 +638,7 @@ export const logoutApi = async () => {
             headers: {
                 "content-type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             mode: "cors",
             credentials: "include",
@@ -655,6 +671,7 @@ export const getUserStatsApi = async () => {
             headers: {
                 "Content-Type": "application/json",
                 accept: "application/json",
+                authorization: localStorage?.getItem("JWT-TOKEN") || null,
             },
             credentials: "include",
             withCredentials: true,
