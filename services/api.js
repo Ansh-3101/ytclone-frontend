@@ -646,7 +646,7 @@ export const logoutApi = async () => {
         });
 
         const data = await res.json();
-
+        localStorage.removeItem("JWT-TOKEN");
         return data;
     } catch (error) {
         return {
