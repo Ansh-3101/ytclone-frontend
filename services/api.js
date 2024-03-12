@@ -7,7 +7,7 @@ const getApi = async () => {
 
 
     try {
-        const response = await fetch(API_URL, {
+        const response = await fetch(`${API_URL}/user`, {
             method: "GET",
             credentials: "include",
             headers: {
